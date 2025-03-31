@@ -1,0 +1,13 @@
+version: '3'
+services:
+  airflowproject:
+    image: airflow-project:latest
+    environment:
+      - AWS_ACCESS_KEY_ID=AKIA3FRRISBGBZX4ZQV3
+      - AWS_SECRET_ACCESS_KEY=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
+      - YOUTUBE_API_KEY=AIzaSyBJi92Bwv2C5CmHjx8NQ7UEUhlczMBOrA0
+    volumes:
+      - ./youtube_trend_analysis:/opt/airflow
+    ports:
+      - "8080:8080"
+    command: airflow standalone
