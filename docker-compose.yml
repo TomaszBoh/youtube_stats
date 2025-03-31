@@ -2,10 +2,14 @@ version: '3'
 services:
   airflowproject:
     image: airflow-project:latest
+    secrets:
+      - access_key
+      - access
+      - api_key
     environment:
-      - AWS_ACCESS_KEY_ID=AKIA3FRRISBGBZX4ZQV3
-      - AWS_SECRET_ACCESS_KEY=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
-      - YOUTUBE_API_KEY=AIzaSyBJi92Bwv2C5CmHjx8NQ7UEUhlczMBOrA0
+      - AWS_ACCESS_KEY_ID=/run/env/access_key.txt
+      - AWS_SECRET_ACCESS_KEY=/run/env/access.txt
+      - YOUTUBE_API_KEY= /run/env/api_key.txt
     volumes:
       - ./youtube_trend_analysis:/opt/airflow
     ports:
