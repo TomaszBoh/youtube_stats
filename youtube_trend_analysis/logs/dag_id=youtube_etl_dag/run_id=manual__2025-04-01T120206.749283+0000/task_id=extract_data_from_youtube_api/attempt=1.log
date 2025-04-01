@@ -1,0 +1,20 @@
+[2025-04-01T12:02:13.867+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-04-01T12:02:13.889+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: youtube_etl_dag.extract_data_from_youtube_api manual__2025-04-01T12:02:06.749283+00:00 [queued]>
+[2025-04-01T12:02:13.905+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: youtube_etl_dag.extract_data_from_youtube_api manual__2025-04-01T12:02:06.749283+00:00 [queued]>
+[2025-04-01T12:02:13.906+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2025-04-01T12:02:13.945+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): extract_data_from_youtube_api> on 2025-04-01 12:02:06.749283+00:00
+[2025-04-01T12:02:13.959+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'youtube_etl_dag', 'extract_data_from_youtube_api', 'manual__2025-04-01T12:02:06.749283+00:00', '--job-id', '52', '--raw', '--subdir', 'DAGS_FOLDER/youtube_etl_dag.py', '--cfg-path', '/tmp/tmp4kwsyk2g']
+[2025-04-01T12:02:13.962+0000] {standard_task_runner.py:105} INFO - Job 52: Subtask extract_data_from_youtube_api
+[2025-04-01T12:02:13.963+0000] {logging_mixin.py:190} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=1453) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-04-01T12:02:13.964+0000] {standard_task_runner.py:72} INFO - Started process 1463 to run task
+[2025-04-01T12:02:14.059+0000] {task_command.py:467} INFO - Running <TaskInstance: youtube_etl_dag.extract_data_from_youtube_api manual__2025-04-01T12:02:06.749283+00:00 [running]> on host 5d58ffcd3aee
+[2025-04-01T12:02:14.206+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='youtube_etl_dag' AIRFLOW_CTX_TASK_ID='extract_data_from_youtube_api' AIRFLOW_CTX_EXECUTION_DATE='2025-04-01T12:02:06.749283+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-01T12:02:06.749283+00:00'
+[2025-04-01T12:02:14.207+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-04-01T12:02:14.230+0000] {__init__.py:49} INFO - file_cache is only supported with oauth2client<4.0.0
+[2025-04-01T12:02:38.848+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-04-01T12:02:38.863+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-04-01T12:02:38.864+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=youtube_etl_dag, task_id=extract_data_from_youtube_api, run_id=manual__2025-04-01T12:02:06.749283+00:00, execution_date=20250401T120206, start_date=20250401T120213, end_date=20250401T120238
+[2025-04-01T12:02:38.962+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-04-01T12:02:38.973+0000] {standard_task_runner.py:217} INFO - Process not found (most likely exited), stop collecting metrics
+[2025-04-01T12:02:38.994+0000] {taskinstance.py:3901} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-04-01T12:02:39.011+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
